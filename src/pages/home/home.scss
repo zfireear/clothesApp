@@ -1,3 +1,29 @@
-page-home {
+page-home{
+@mixin position($position, $top: null, $right: null, $bottom: null, 
+                $left: null,$float:null,$clear:null){
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    float:$float;
+    clear:$clear;
+}
 
+@mixin margin($margin-top:null,$margin-bottom:null,$margin-left:null,$margin-right:null ){
+    margin-top: $margin-top;
+    margin-bottom:$margin-bottom;
+    margin-left:$margin-left;
+    margin-right:$margin-right;
+}
+
+.menu{
+    @include position(absolute,$float:left);
+}
+
+.title{
+    @include position(relative,$float:right,$right:30%);
+    @include margin($margin-top:15px)
+    
+}
 }

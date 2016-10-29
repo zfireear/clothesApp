@@ -1,14 +1,34 @@
 <ion-header>
+
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <button ion-button menu-toggle="left" (click)="">
+      <ion-icon name="menu" class="menu"></ion-icon>
+    </button>
+    <ion-title class="title">时尚轻纺</ion-title>
   </ion-navbar>
+
+  <ion-searchbar
+    [(ngModel)]="search"
+    [showCancelButton]="shouldShowCancel"
+    
+  ></ion-searchbar>
+
+  <div padding>
+    <ion-segment [(ngModel)]="option">
+      <ion-segment-button value="brands" (ionSelect)="selectedBrands()">品牌衣
+      </ion-segment-button>
+      <ion-segment-button value="designers" (ionSelect)="selectedDesigners()">设计师
+      </ion-segment-button>
+      <ion-segment-button value="materials" (ionSelect)="selectedMaterials()">面/辅料
+      </ion-segment-button>
+      <ion-segment-button value="news" (ionSelect)="selectedNews()">资讯
+      </ion-segment-button>
+      <ion-segment-button value="designworks" (ionSelect)="selectedDesignworks()">设计作品
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
 </ion-content>
