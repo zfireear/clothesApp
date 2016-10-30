@@ -22,8 +22,8 @@ page-home{
 }
 
 .title{
-    @include position(relative,$float:right,$right:30%);
-    @include margin($margin-top:15px)
+    @include position(relative,$float:right,$right:40%);
+    @include margin($margin-top:5px)
     
 }
 }

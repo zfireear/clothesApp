@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
-import {MenuPage} from '../menu/menu';
-
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
@@ -11,14 +8,11 @@ import {MenuPage} from '../menu/menu';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor() {
     
   }
 
-  //跳转到其他窗口
-  openMenuPage(){
-    this.navCtrl.push(MenuPage);
-  }
+  
 
   selectedBrands(){}
   selectedDesigners(){}

@@ -10,8 +10,5 @@ export class MenuPage{
     
     constructor(public navCtrl:NavController){}
     
-    backToHomePage():void{
-
-    }
 
 }
