@@ -1,14 +1,17 @@
-import { Component } from '@angular/core';
+import { Component,ViewChild } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
-
+import {NavController} from 'ionic-angular';
 import { HomePage } from '../pages/home/home';
 
 
 @Component({
-  template: `<ion-nav [root]="rootPage"></ion-nav>`
+  template: `<ion-nav #myNav [root]="rootPage"></ion-nav>`
 })
 export class MyApp {
+  //get an instance of the Nav component from root component
+  @ViewChild('myNav') nav:NavController;
+
   rootPage = HomePage;
 
   constructor(platform: Platform) {
@@ -19,4 +22,8 @@ export class MyApp {
       Splashscreen.hide();
     });
   }
+
+
+
+  
 }
