@@ -1,27 +1,31 @@
+<ion-header>
+</ion-header>
+<ion-content>
 <ion-menu [content]="mymenu">
   <ion-content>
     <ion-list>
         <ion-item item-left>
-        <ion-avatar>
+        <ion-avatar  (click)="openMenu(menus[0])" >
             <img src="assets/icon/favicon.ico">
         </ion-avatar>
             </ion-item>
         <button ion-item detail-none menuClose>主页
         </button>
-        <button ion-item detail-none >我的专辑
+        <button ion-item detail-none (click)="openMenu(menus[1])">我的专辑
         </button>
-        <button ion-item detail-none >我的作品
+        <button ion-item detail-none (click)="openMenu(menus[2])">我的作品
         </button>
-        <button ion-item detail-none >我的收藏
+        <button ion-item detail-none (click)="openMenu(menus[3])">我的收藏
         </button>
-        <button ion-item detail-none >购买需求
+        <button ion-item detail-none (click)="openMenu(menus[4])">购买需求
         </button>
-        <button ion-item detail-none >密码
+        <button ion-item detail-none (click)="openMenu(menus[5])">密码
         </button>
-        <button ion-item detail-none >设置
+        <button ion-item detail-none (click)="openMenu(menus[6])">设置
         </button>
         <button ion-button >退出</button>
     </ion-list>
   </ion-content>
 </ion-menu>
-<ion-nav #mymenu [root]="rootPage"></ion-nav>
+<ion-nav #mymenu swipeBackEnabled="false" [root]="rootPage"></ion-nav>
+</ion-content>
